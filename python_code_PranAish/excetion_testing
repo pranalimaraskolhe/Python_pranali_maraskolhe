@@ -1,0 +1,15 @@
+class my_exception(Exception): 
+    pass
+
+lst = [1,2,3]
+is_homogeneous = True
+j = lst[0]
+
+for i in range(1,len(lst)):
+    if(type(j)!= type(lst[i])):
+        is_homogeneous = False
+        break
+if is_homogeneous:
+    raise my_exception
+else:
+    print("We return a hetrogeneus list")
